@@ -1,0 +1,108 @@
+.m0{margin: 0;}
+.p0{padding: 0;}
+
+body{
+    font: 400 14px/25px $raleway;
+    color: $gray;
+}
+
+a,.btn,button{
+    text-decoration: none;
+    outline: none;
+    @include transition();
+    &:hover,&:focus{
+        text-decoration: none;
+        outline: none;
+    }
+}
+ul,h2,h3,h4,h5,h6{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+section, header, footer{
+    &.row{
+        margin: 0;
+    }
+}
+p{
+    font: 300 14px/25px $raleway;
+    color: $gray;
+    margin-bottom: 0;
+}
+
+.section-header{
+    text-align: center;
+    h2{
+        font: 400 41px/70px $montserrat;
+        letter-spacing: 0.50px;
+        color: $light-blue;
+        text-transform: uppercase;
+        &:after{
+            content: '';
+            width: 40px;
+            height: 2px;
+            background: $brown;
+            display: block;
+            left: 50%;
+            transform: translateX(-50%);
+            position: relative;
+            margin-top: 8px;
+        }
+    }
+    p{
+        max-width: 595px;
+        margin: 0 auto;
+        color: #9d9d9d;
+        padding-top: 43px;
+    }
+}
+.tittle{
+    font: 400 41px/41px $montserrat;
+    letter-spacing: 0.50px;
+    color: $light-blue;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+    &:after{
+        left: 2px;
+        margin-top: 22px;
+        content: '';
+        width: 40px;
+        height: 2px;
+        background: $brown;
+        position: relative;
+        display: block;
+    }
+}
+
+
+
+
+.partner-logo-area{
+    background: url(../image/client_bg.jpg) no-repeat scroll 0 0;
+    background-size: cover;
+    position: relative;
+    padding: 90px 0px;
+    &:before{
+        content: "";
+        background: rgba(180, 145, 50, .9);
+        position: absolute;
+        left: 0;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+    }
+    .section-header{
+        position: relative;
+        margin-bottom: 30px;
+        h2{
+            color: #fff;
+            &:after{
+                background: #fff;
+            }
+        }
+    }
+    .middle_client{
+        text-align: center;
+    }
+}

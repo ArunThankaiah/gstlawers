@@ -1,0 +1,65 @@
+/*====================breadcrumb area css================*/
+.header-breadcrumb{
+    background: #adadad;
+    padding: 60px 0px 72px;
+    z-index: 0;
+    overflow: hidden;
+    .page-cover{
+        .section-header{  
+            h2{
+                color: #fff;
+                &:after{
+                    background: #fff;
+                }
+            }
+        }
+    }
+}
+ .breadcrumb{
+    background: none;
+    padding: 64px 0px 0px 0px;
+    text-align: center;
+    margin-bottom: 0px;
+    li{
+        font: 200 14px/25px $raleway;
+        letter-spacing: 0.20px;
+        color: #fff;
+        a{
+            font-weight: 500;
+            color: #fff;
+        }
+        & + li{
+            &:before{
+                content: "\f105";
+                font: normal normal normal 14px/1 FontAwesome;
+                color: #fff;
+                padding: 0px 10px 0px 8px;
+            }
+        }
+        &.active{
+           color: #fff; 
+        }
+    }
+}
+
+.b-banner{
+    padding: 22px 0px 35px;
+    border-top: 1px solid #e6e6e6;
+    .breadcrumb{
+        text-align: left;
+        padding: 0;
+    }
+    li{
+        a{
+            color: #000;
+        }
+        & + li{
+            &:before{
+                color: $brown;
+            }
+        }
+        &.active{
+           color: #000; 
+        }
+    }
+}

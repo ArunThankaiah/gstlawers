@@ -1,0 +1,265 @@
+/* preloader css
+============================================================================================ */
+$animationLength: 1.5s;
+$animationRadius: 12px;
+$dotSize: 8px;
+
+.sampleContainer { 
+    position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #fff;
+	z-index: 99999999;
+}
+
+.loader { 
+    position: relative; 
+    width: $animationRadius * 3 + $dotSize;
+    height: $dotSize; 
+    margin: $animationRadius auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.dot {
+    display: inline-block;
+    width: $dotSize;
+    height: $dotSize;
+    border-radius: $dotSize * 0.5;
+    background: #757575;
+    position: absolute;
+}
+
+.dot_1 {
+    animation: animateDot1 $animationLength linear infinite;
+    left: $animationRadius;
+    background: $brown; 
+}
+
+.dot_2 {
+    animation: animateDot2 $animationLength linear infinite;
+    animation-delay: $animationLength / 3;
+    left: $animationRadius * 2;
+}
+
+.dot_3 {
+    animation: animateDot3 $animationLength linear infinite;
+    left: $animationRadius;
+}
+
+.dot_4 {
+    animation: animateDot4 $animationLength linear infinite;
+    animation-delay: $animationLength / 3;
+    left: $animationRadius * 2;
+}
+
+@keyframes animateDot1 {
+    0%{ transform: rotate(0deg) translateX(-$animationRadius); }
+    25% { transform: rotate(180deg) translateX(-$animationRadius); }
+    75% { transform: rotate(180deg) translateX(-$animationRadius); }
+    100% { transform: rotate(360deg) translateX(-$animationRadius); }
+}
+
+@keyframes animateDot2 {
+    0%{ transform: rotate(-0deg) translateX(-$animationRadius); }
+    25% { transform: rotate(-180deg) translateX(-$animationRadius); }
+    75% { transform: rotate(-180deg) translateX(-$animationRadius); }
+    100% { transform: rotate(-360deg) translateX(-$animationRadius); }
+}
+
+@keyframes animateDot3 {
+    0%{ transform: rotate(0deg) translateX($animationRadius); }
+    25% { transform: rotate(180deg) translateX($animationRadius); }
+    75% { transform: rotate(180deg) translateX($animationRadius); }
+    100% { transform: rotate(360deg) translateX($animationRadius); }
+}
+
+@keyframes animateDot4 {
+    0%{ transform: rotate(-0deg) translateX($animationRadius); }
+    25% { transform: rotate(-180deg) translateX($animationRadius); }
+    75% { transform: rotate(-180deg) translateX($animationRadius); }
+    100% { transform: rotate(-360deg) translateX($animationRadius); }
+}
+
+/*---------------------------------------------------- */
+
+
+/*====================header css=======================*/
+
+/*==================header-top================*/
+.header-top{
+    background: $brown;
+    .top-nav{
+        display:inline-block;
+        li{
+            display: inline-block;
+            a{
+                font: 400 14px/50px $raleway;
+                color: #fff;
+                padding: 0;
+                i{
+                    font-size: 16px;
+                    line-height: 50px;
+                    float: left;
+                    margin-right: 10px;
+                }
+                &:hover{
+                    background: none;
+                }
+            }
+            & + li{
+                padding-left: 30px;
+            }
+        }
+    }
+    .search{
+        float: right;
+        font-size: 18px;
+        line-height: 50px;
+        color: #fff;
+        transform: rotate(90deg);
+    }
+}
+.header-bottom{
+    .navbar-default{
+        border: 0px;
+        box-shadow: none;
+        margin-bottom: 0px;
+        background: #fff;
+        border-radius: 0px;
+        .navbar-brand{
+            display:block;
+            padding: 48px 0px 0px 15px;
+            line-height: 130px;
+            height: auto;
+        }
+        .navbar-nav{
+            padding-top: 60px;
+            padding-bottom: 46px;
+            li{
+                position: relative;
+                a{
+                    padding: 0;
+                    font: 400 16px/22px $raleway;
+                    color: #9d9d9d;
+                    box-shadow: none;
+                    position: relative;
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        width: 0;
+                        transform: translateX(-50%);
+                        height: 2px;
+                        bottom: -6px;
+                        left: 50%;
+                        opacity: 0;
+                        background: $brown;
+                        @include transition;
+                    }
+                    &:hover,&:focus{
+                        background: none;
+                        color: $brown;
+                        box-shadow: none;
+                    }
+                }
+                & + li{
+                    padding-left: 30px;
+                }
+                &.dropdown{
+                    &>a{
+                        &:after{
+                            content: "\33";
+                            font-family: 'ElegantIcons';
+                            font-size:16px;
+                            line-height: 22px;
+                            -webkit-font-smoothing: antialiased;
+                            margin-left: 5px;
+                        }
+                    }
+                    .dropdown-menu{
+                        background: $brown;
+                        box-shadow: none;
+                        border: none;
+                        min-width: 170px;
+                        border-radius: 0;
+                        @media (min-width: 1025px){
+                            display: block;
+                            top: 300%;
+                            z-index: -10000;
+                            opacity: 0;
+                            visibility: hidden;
+                            @include transition;
+                        }
+                        li{
+                            padding: 10px 10px 10px 20px;
+                            a{
+                                font: 400 16px/22px $raleway;
+                                color: #fff;
+                                text-transform: capitalize;
+                                &:before{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                &:hover{
+                    a{
+                        background: none;
+                        &:before{
+                            width: 24px;
+                            opacity: 1;
+                        }
+                    }
+                    .dropdown-menu{
+                        @media (min-width: 1025px){
+                            visibility: visible;
+                            top: 125%;
+                            z-index: 10000;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            .active{
+                a{
+                    color: $brown;
+                    background: none;
+                    box-shadow: none;
+                    &:before{
+                        width: 24px;
+                        opacity: 1;
+                    }
+                    &:hover{
+                    }
+                }
+            }
+        }
+    }
+}
+
+.navbar-right {
+    margin-right: 0px;
+}
+
+/* ============= affix-header-top==============*/
+
+.header-bottom{
+    &.affix{
+        width: 100%;
+        top: 0;
+        .navbar-default{
+            .navbar-brand {
+                padding-top: 15px;
+            }
+            .navbar-nav{
+                padding-top: 26px;
+                padding-bottom: 20px;
+            }
+        }
+    }
+}

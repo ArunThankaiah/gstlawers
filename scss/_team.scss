@@ -1,0 +1,104 @@
+/*====================team area css===========================*/
+
+.team-area{
+    padding: 100px 0px 110px 0px;
+    .team{
+        padding-top: 80px;
+        .team-item{
+            position: relative;
+            cursor: pointer;
+            .team-img{
+                position: relative;
+                z-index: 1;
+                &:after{
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    background: #000;
+                    opacity: 0.30;
+                    position: absolute;
+                    top: 0;
+                    z-index: 0;
+                    transform: scaleY(0);
+                    transform-origin: center bottom;
+                    @include transition;
+                }
+            }
+            .social-icon{
+                position: absolute;
+                text-align: center;
+                top: 50%;
+                transform: translateY(-50%);
+                width: calc(100% - 16px);
+                transform: translate3d(0, 100px, 0);
+                opacity: 0;
+                transition: all 0.9s;
+                z-index: 1;
+                li{
+                    display: inline-block;
+                    a{
+                        font-size: 16px;
+                        line-height: 30px;
+                        color: #fff;
+                        @include transition;
+                        &:hover{
+                            color: $brown;
+                        }
+                    }
+                    & +li{
+                        margin-left: 40px;
+                    }
+                }
+            }
+            .text{
+                text-align: center;
+                padding-top: 20px;
+                h4{
+                    font: 700 18px/30px $raleway;
+                    color: $light-blue;
+                    @include transition;
+                    &:hover{
+                        color: $brown;
+                    }
+                }
+                p{
+                    font: 300 14px/34px $raleway;
+                    color: #9d9d9d;
+                }
+            }
+            &:hover{
+                .team-img{
+                    &:after{
+                        transform: scaleY(1);
+                    }
+                }
+                .social-icon{
+                    transform: scale3d(1, 1, 1);
+                    opacity: 1;
+                }
+            }
+        }
+        .owl-controls{
+            .owl-dots{
+                text-align: center;
+                padding-top: 60px;
+                .owl-dot{
+                    display: inline-block;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    border: 1px solid $brown;
+                    & + .owl-dot{
+                        margin-left: 10px;
+                    }
+                    &.active{
+                        background: $brown;
+                        width: 10px;
+                        height: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+$brown:#b49132;
+$light-blue:#373c5f;
+$gray:#a9a9a9;
+$l-gray:#9d9d9d;
+
+$raleway: 'Raleway', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
+$catamaran: 'Catamaran', sans-serif;
+
+// Mixins
+@mixin transition($property: all, $duration: 300ms, $animate: linear, $delay:0s){
+    transition: $property $duration $animate $delay;
+}
+
+//contact-form-mixin
+@mixin placeholder {
+  &.placeholder { @content }
+  &:-moz-placeholder { @content }
+  &::-webkit-input-placeholder { @content }
+}

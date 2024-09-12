@@ -1,0 +1,36 @@
+/*====================latest featured css==================*/
+.latest-featured-area{
+    padding: 80px 0px 127px;
+}
+.featured-left{
+    .items{
+        margin-bottom: 70px;
+        .tittle{
+            font-size: 18px;
+            line-height: 27px;
+            text-align: center;
+            padding-top: 50px;
+            margin-bottom: 0px;
+            position: relative;
+            text-transform: capitalize;
+            @include transition;
+            cursor: pointer;
+            &:after{
+                left: 50%;
+                transform: translateX(-50%);
+                position: absolute;
+                top: 29px;
+                margin-top: 0px;
+            }
+            &:hover{
+                color: $brown;
+            }
+        }
+        p{
+            padding: 18px 0px 0px 5px;
+        }
+        & + .items{
+            padding-top: 74px;
+        }
+    }
+}

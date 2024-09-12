@@ -1,0 +1,22 @@
+/*==================our process area============*/
+.process-area .p-timeline {
+  max-width: 810px;
+  margin: 0 auto;
+  position: relative;
+}
+.process-area .p-timeline:before {
+  position: absolute;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  left: 50%;
+  content: '';
+  background-color: #dadada;
+  display: block;
+}
+.process-area .p-timeline .column {
+  width: 380px;
+}
+.process-area .p-timeline:nth-child(even) .column {
+  float: right;
+}

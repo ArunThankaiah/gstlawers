@@ -1,0 +1,216 @@
+/*==================latest news area css=========================*/
+
+.latest-news-area{
+    background: #f1f1f1;
+    padding: 120px 0px 113px 0px;
+}
+.l-news-left{
+    .news-info{
+        & + .news-info{
+                margin-top: 20px;
+            }
+        .media{
+            .media-left{
+                padding-right: 30px;
+            }
+            .media-body{
+                padding-right: 55px;
+                vertical-align: middle;
+                h3{
+                    font: 400 18px/27px $montserrat;
+                    color: $light-blue;
+                    
+                }
+                .post-meta{
+                    padding-top: 16px;
+                    li{
+                        display: inline-block;
+                        a{
+                            padding: 0;
+                            font: 300 12px/28px $raleway;
+                            color: $l-gray;
+                            display: inline-block;
+                            @include transition;
+                            i{
+                                font-size: 16px;
+                                color: #b3b3b3;
+                                padding-right: 10px;
+                                padding-top: 6px;
+                                float: left;
+                            }
+                            &:hover{
+                                background: none;
+                                color: $brown;
+                                i{
+                                   color: $brown; 
+                                }
+                            }
+                        }
+                        & + li{
+                            padding-left: 20px;
+                            &:before{
+                                content: '';
+                                background: #cecccc;
+                                margin-right: 20px;
+                                width: 1px;
+                                height: 17px;
+                                bottom: -3px;
+                                position: relative;
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .read-button{
+        float: right;
+        text-transform: lowercase;
+        padding: 13px 40px 0px 0px;
+    }
+}
+.l-news-right{
+    padding-left: 0;
+    .l-slider{
+        background: #fff;
+        text-align: center;
+        padding: 100px 0px 57px 0px;
+        p{
+            font-style: italic;
+            color: #646464;
+            padding: 0px 25px 0px 33px;
+            &:after{
+                content: '';
+                width: 40px;
+                height: 2px;
+                background: $brown;
+                display: block;
+                left: 50%;
+                transform: translateX(-50%);
+                position: relative;
+                margin-top: 22px;
+            }
+        }
+        .slider-img{
+            margin: 57px auto 0px auto;
+            width: 121px;
+            height: 121px;
+            img{
+                max-width: 100%;
+            }
+        }
+        h4{
+            padding-top: 23px;
+            font: 400 18px/20px $montserrat;
+            color: $light-blue;
+            span{
+               font: 300 16px/20px $raleway;
+                color: $l-gray;
+            }
+        }
+        .owl-controls{
+            .owl-dots{
+                text-align: center;
+                padding-top: 47px;
+                .owl-dot{
+                    display: inline-block;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    border: 1px solid $brown;
+                    & + .owl-dot{
+                        margin-left: 12px;
+                    }
+                    &.active{
+                        background: $brown;
+                        width: 10px;
+                        height: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*========= email-signup-area css ======*/
+.email-signup-area{
+    padding: 75px 0px 80px;
+    text-align: center;
+    background: url('../image/email-bg.jpg');
+    background-size: cover;
+    position: relative;
+    background-color: gray;
+    background-blend-mode: luminosity;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+    z-index: 1;
+    &:after{
+        content: '';
+        background: #000;
+        opacity: 0.60;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: block;
+        height: 100%;
+        z-index: -1;
+    }
+    .email-content{
+        h2{
+            font:400 24px/30px $montserrat;
+            color: #fff;
+        }
+        p{
+            font: 400 14px/25px $raleway;
+            color: #fff;
+            padding: 18px 0px 50px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .search-form{
+            width: 556px;
+            margin: 0 auto;
+            .input-group{
+                .form-control{
+                    font: 300 14px/50px $raleway;
+                    color: #9d9d9d;
+                    padding: 0px 0px 0px 25px;
+                    outline: none;
+                    box-shadow: none;
+                    border: 0px;
+                    height: auto;
+                    border-radius: 0px;
+                    text-transform: capitalize;
+                    &:focus{
+                        outline: none;
+                        box-shadow: none;
+                    }
+                    @include placeholder{
+                        color: #9d9d9d;
+                    }
+                }
+                .input-group-addon{
+                    padding: 0px;
+                    background: none;
+                    border: 0px;
+                    position: relative;
+                    button{
+                        font: 400 16px/30px $montserrat;
+                        color: #fff;
+                        border: 0px;
+                        padding: 10px 43px;
+                        text-transform: uppercase;
+                        background: $brown;
+                        filter: grayscale(0) !important;
+                        -webkit-filter: grayscale(0) !important;
+                    }
+                }
+            }
+        }
+    }
+}

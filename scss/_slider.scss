@@ -1,0 +1,59 @@
+/*======================slider area css ============================*/
+.slider-area{
+    .slider-img{
+    }
+    .s-content{
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        h3{
+            font: 400 42px/74px $montserrat;
+            letter-spacing: 0.50px;
+            color: #fff;
+        }
+        h2{
+            font: 700 71px/110px $montserrat;
+            letter-spacing: 2px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        p{
+            font:200 25px/45px $raleway;
+            color: #fff;
+            max-width: 520px;
+            margin: 0 auto;
+            padding-top: 13px;
+        }
+        .button{
+            margin-top: 38px;
+            &:after{
+                content: "our service";
+                color:#fff;
+            }
+        }
+    }
+    .owl-controls{
+        .owl-dots{
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            transform: translateY(-50%);
+            .owl-dot{
+                display: block;
+                width: 2px;
+                height: 36px;
+                background: #bebfc0;
+                margin-bottom: 10px;
+                &.active{
+                    background: #fff;
+                    
+                }
+                & + .owl-dot{
+                }
+            }
+        }
+    }
+}

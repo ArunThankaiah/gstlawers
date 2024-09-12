@@ -1,0 +1,43 @@
+/*=====================button css=====================*/
+.button{
+    font: 700 16px/50px $catamaran;
+    letter-spacing: 0.50px;
+    width: 210px;
+    display: inline-block;
+    background: $brown;
+    color: #fff;
+    height: 50px;
+    padding: 0px;
+    text-transform: uppercase;
+    border-radius: 0px;
+    transform-style: preserve-3d;
+    transform-origin: 50% 0%;
+    border: 0px;
+    outline: none;
+    cursor: pointer;
+    i{
+        font-size: 16px;
+        color: #fff;
+        padding-left: 10px;
+    }
+    &:after{
+        top: -100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        font: 700 16px/50px $catamaran;
+        position: absolute;
+        background: none;
+        border: 2px solid $brown;
+        border-radius: 0px;
+        content: "";
+        transform-origin: left bottom;
+        transform: rotateX(90deg);
+        cursor: pointer;
+    }
+    &:hover{
+        transform-origin: center bottom;
+	    transform: rotateX(-90deg) translateY(100%);
+        color: #fff;
+    }
+}

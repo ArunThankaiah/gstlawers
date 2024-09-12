@@ -1,0 +1,150 @@
+/*==================our process area============*/
+.process-area{
+    padding: 98px 0px 50px 0px;
+    background: #f4f4f4;
+    .p-timeline{
+        max-width: 810px;
+        margin: 90px auto 0px auto;
+        position: relative;
+        padding-top: 43px;
+        &:before{
+            position: absolute;
+            top: 0;
+            width: 1px;
+            left: 50%;
+            content: '';
+            background-color: #dadada;
+            display: block;
+            height: 594px;
+        }
+        .column{
+            width:50%;
+            float: left;
+            margin-bottom: 63px;
+            position: relative;
+            &:after{
+                width: 69px;
+                height: 1px;
+                content: '';
+                background: #dadada;
+                position: absolute;
+                top: 35px;
+                right: 0;
+                
+            }
+            &:before{
+                width: 10px;
+                height: 10px;
+                content: "";
+                position: absolute;
+                border-radius: 50%;
+                border: 1px solid $brown;
+                right: 69px;
+                top: 17%;
+            }
+            .timeline{
+                width: 270px;
+                float: right;
+            }
+            .media{
+                .media-left{
+                    position: relative;
+                    &:after{
+                        content: '';
+                        width: 1px;
+                        height: 40px;
+                        background: #dadada;
+                        position: absolute;
+                        top: 23%;
+                        left: -19px;
+                    }
+                    span{
+                        font: 400 56px $montserrat;
+                        letter-spacing: 0.50px;
+                        color: $brown;
+                    }
+                }
+                .media-body{
+                    vertical-align: middle;
+                    h2{
+                        font: 400 18px/32px $montserrat;
+                        color: $light-blue;
+                        display: inline-block;
+                    }
+                }
+            }
+            p{
+                letter-spacing: 0.20px;
+                color: #7d7d7d;
+                padding:12px 10px 0px 0px;
+            }
+            &:nth-child(even){
+                float: right;
+                text-align: left;
+                padding-left: 112px;
+                &.top{
+                    margin-top: 122px;
+                }
+                &:after{
+                    width: 69px;
+                    height: 1px;
+                    content: '';
+                    background: #dadada;
+                    position: absolute;
+                    top: 34px;
+                    right: auto;
+                    left: 0;
+                }
+                &:before{
+                    width: 10px;
+                    height: 10px;
+                    content: "";
+                    position: absolute;
+                    border-radius: 50%;
+                    border: 1px solid $brown;
+                    left: 69px;
+                    right: auto;
+                    top: 16%;
+                }
+                .timeline{
+                    float: left; 
+                }
+                .media{
+                    position: relative;
+                    .media-left{
+                        &:after{
+                            content: '';
+                            width: 1px;
+                            height: 40px;
+                            background:#dadada;
+                            position: absolute;
+                            top: 19%;
+                            right: -6px;
+                            left: auto;
+                        }
+                    }
+                    .media-body{
+                        padding-left: 23px;
+                    }
+                }
+            }
+            &:nth-child(odd){
+                padding-right: 112px;
+                text-align: left;
+            }
+        }
+//        &:nth-child(even){
+//            .column{
+                
+//            }
+//        }
+//        &:nth-child(odd){
+//            .column{
+//                text-align: right;
+//                span{
+////                    float: left;
+//                }
+//            }
+//        }
+    }
+}

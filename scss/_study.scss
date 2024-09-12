@@ -1,0 +1,266 @@
+/*============== case-study-area css ==================*/
+
+.case-study-area{
+    padding-bottom: 80px;
+    z-index: 0;
+    overflow: hidden;
+    display: block;
+}
+.case-study{
+    z-index: 0;
+    overflow: hidden;
+    h2{
+        font: 400 42px/36px $montserrat;
+        color: $light-blue;
+    }
+    .text{
+        font: 700 16px/45px $raleway;
+        letter-spacing: 0.20px;
+        color: $l-gray;
+        position: relative;
+        &:after{
+            content: '';
+            width: 40px;
+            height: 2px;
+            background: $brown;
+            position: absolute;
+            bottom: -13px;
+            left: 0;
+        }
+    }
+    .media-info{
+        padding-top: 45px;
+        padding-bottom: 52px;
+        .media-left{
+            padding-right: 30px;
+            padding-top: 5px;
+        }
+        .media-body{
+            h4{
+                font: 400 18px/27px $montserrat;
+                color: $light-blue;
+            }
+            p{
+                color: #464646;
+                padding-top: 25px;
+            }
+        }
+    }
+    .case-info{
+        .media{
+            border-top: 1px solid #e6e6e6;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            .media-left{
+                padding-left: 43px;
+                padding-right: 29px;
+                padding-top: 5px;
+                .tittle{
+                    font-size: 24px;
+                    line-height: 20px;
+                    color: #020202;
+                    float: right;
+                    position: relative;
+                    text-transform: capitalize;
+                    &:after{
+                        left: auto;
+                        right: 0;
+                        position: absolute;
+                    }
+                }
+            }
+            .media-body{
+                p{
+                    color: #464646;
+                }
+            }
+        }
+        .result-info{
+            .media-body{
+                p{
+                    padding-bottom: 10px;
+                }
+                .list{
+                    padding-top: 15px;
+                }
+            }
+            .color-b{
+                font:300 12px/25px $raleway;
+                display: inline-block;
+                padding: 0px 10px;
+                position: relative;
+                margin-left: 15px;
+                padding-left: 35px;
+                color: #646464;
+                &:after{
+                    width: 25px;
+                    height: 25px;
+                    content: '';
+                    border-radius: 50%;
+                    background: #e66e46;
+                    position: absolute;
+                    display: block;
+                    top: 0;
+                    left: 0;
+                }
+                & + .color-b{
+                    &:after{
+                        background: #fab432;
+                    }
+                }
+            }
+        }
+    }
+}
+.list{
+    padding-left: 25px;
+    padding-top: 28px;
+    h4{
+        color: $light-blue;
+        font: 700 14px/25px $raleway;
+        &:before{
+            content: "\f111";
+            font: normal normal normal 7px FontAwesome;
+            color: $brown;
+            display: inline-block;
+            float: left;
+            line-height: 25px;
+            margin-left: -25px;
+        }
+    }
+    p{
+        padding-top: 10px;
+    }
+}
+
+#chartContainer{
+    margin-top: 50px;
+    height: 410px;
+    width: 100%;
+}
+
+
+
+/*==================services-bonds-area=================*/
+.services-bonds-area{
+    padding: 80px 0px 100px;
+    .bonds-info{
+        overflow: hidden;
+        z-index: 0;
+        p{
+            color: #464646;
+        }
+        .industries-icon{
+            padding-top: 55px;
+            border-bottom: 1px solid #e6e6e6;
+            padding-bottom: 60px;
+            .media-left{
+                padding-right: 20px;
+            }
+            .media-body{
+                a{
+                    font: 400 18px/25px $montserrat;
+                    color: $light-blue;
+                    &:hover{
+                        color: $brown;
+                    }
+                }
+            }
+            .media{
+                & + .media{
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+.common{
+    font: 400 24px/20px $montserrat;
+    color: #000;
+    margin-bottom: 60px;
+    text-transform: capitalize;
+}
+.planning-inner{
+    .common{
+        margin-bottom: 35px;
+    }
+    .list{
+        padding-top: 15px;
+        
+    }
+}
+
+.accoidion{
+    padding-top: 58px;
+    .common{
+        margin-bottom: 40px;
+    }
+    .panel-default{
+        background: none;
+        box-shadow: none;
+        border: 0px;
+        border-radius: 0px;
+        .panel-heading{
+            background: none;
+            padding: 0;
+            a{
+                display: block;
+                font: 400 18px/26px $montserrat;
+                color: $light-blue;
+                padding: 12px 20px;
+                background: #f4f4f4;
+                i{
+                    font-size: 20px;
+                    float: right;
+                    line-height: 26px;
+                    color: $light-blue;
+                }
+                .fa-angle-down{
+                    display: block;
+                }
+                .fa-angle-right{
+                    display: none;
+                }
+                &.collapsed{
+                    background: #c1c1c1;
+                   .fa-angle-down{
+                        display: none;
+                    }
+                    .fa-angle-right{
+                        display: block;
+                    }
+                }
+            }
+        }
+        .panel-collapse{
+            .panel-body{
+                border: 0px;
+                color: #464646;
+                background: #f4f4f4;
+            }
+        }
+        & + .panel-default{
+            margin-top: 1px;
+        } 
+    }
+}
+.canvasjs-chart-credit{
+    display: none;
+}
+
+//pie-chart
+.bonds-info{
+    .inner-plan{
+        padding: 60px 0px 40px;
+        .pie-chart{
+            padding-left: 50px;
+            .common{
+                margin-bottom: 35px;
+            }
+            p{
+                font-size: 12px;
+                padding: 30px 0px 0px 0px;
+            }
+        }
+    }
+}

@@ -1,0 +1,185 @@
+/*===== history area css =====*/
+.history-area{
+    padding: 80px 0px 0px;
+    height: 1260px;
+    overflow: hidden;
+    .history-content{
+        padding-top: 50px;
+        p{
+            font: 300 14px/25px $raleway;
+            color: #464646;
+        } 
+    }
+    .text-1{
+        text-align: right;
+        padding-left: 100px;
+    }
+    .text-2{
+        text-align: left;
+        padding-right: 100px;
+    }
+    .history-image{
+        position: relative;
+        height: 1250px;
+        top: -30px;
+        &:after{
+            content: '';
+            background: url('../image/04_About-us.jpg') no-repeat scroll center bottom;
+            background-size: cover;
+            position: absolute;
+            top: -30px;
+            display: block;
+            width: 100%;
+            height: 100%;
+            z-index: -1
+        }
+    }
+}
+.history{
+    text-align: center;
+    h2{ 
+        font: 400 24px/30px $montserrat;
+        color: $light-blue;
+        padding-bottom: 18px;
+    }
+    p{
+        font: 300 14px/25px $raleway;
+        color: #7b7b7b;
+        max-width: 792px;
+        margin: 0 auto;
+    }
+}
+
+
+/*====== problem-group-area css ========*/
+.problem-group-area{
+    background: #f4f4f4;
+    padding: 75px 0px 49px;
+    .problem-group{
+        padding-top: 56px;
+    }
+    .lists{
+        .nav{
+            li{
+                a{
+                    font: 700 14px/20px $montserrat;
+                    color: $light-blue;
+                    padding: 0px;
+                    text-transform: capitalize;
+                    display: inline-block;
+                    padding-bottom: 29px;
+                    &:before{
+                        content: "\f111";
+                        font: normal normal normal 14px/1 FontAwesome;
+                        text-rendering: auto;
+                        font-size: 8px;
+                        line-height: 21px;
+                        float: left;
+                        color: $brown;
+                        padding-right: 20px;
+                    }
+                    &:hover{
+                        background: none;
+                        color: $brown;
+                    }
+                    &:focus{
+                        background: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*======gets-started-area csss====*/
+.gets-started-area{
+    background: $brown;
+    padding: 80px 0px 70px;
+    .text{
+        padding-top: 16px;
+        p{
+            font: 400 18px/16px $raleway;
+            color: #fff;
+        }
+    }
+    .get-button{
+        button{
+            font: 400 16px/16px $montserrat;
+            color: #464646;
+            background: #fff;
+            border: 0px;
+            border-radius: 0px;
+            outline: none;
+            box-shadow: none;
+            padding: 17px 0px;
+            text-transform: uppercase;
+            transition: all 0.6s ease-in-out;
+            max-width: 210px;
+            display: block;
+            width: 100%;
+            float: right;
+            &:focus{
+                outline: none;
+                box-shadow: none;
+            }
+            &:hover{
+                background: $light-blue;
+                color: #fff;
+            }
+        }
+    }
+}
+
+/*===== leaders-area css =====*/
+.leaders-area{
+    padding: 80px 0px 73px;
+    .content{
+        padding-right: 98px;
+        h2{
+            font: 400 24px/30px $montserrat;
+            color: $light-blue;
+        }
+        p{
+            color: #464646;
+            padding-top: 19px;
+        }
+    }
+    .leaders-slider{
+        cursor: pointer;
+        .owl-controls{
+            .owl-dots{
+                text-align: center;
+                padding-top: 26px;
+                .owl-dot{
+                    display: inline-block;
+                    border: 1px solid #dcdcdc;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    margin-left: 12px;
+                    &.active{
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background: $brown;
+                    }
+                }
+            }
+        }
+        .text{
+            padding: 18px 0px;
+            h2{
+                font: 700 18px/30px $raleway;
+                color: $light-blue;
+                @include transition;
+                &:hover{
+                    color: $brown;
+                }
+            }
+            p{
+                font: 400 14px/30px $raleway;
+                color: #9d9d9d;
+            }
+        }
+    }
+}
